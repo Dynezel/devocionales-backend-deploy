@@ -41,7 +41,7 @@ public class Usuario implements Serializable {
     @Enumerated(EnumType.STRING)
     private Rol rol;
 
-    @OneToMany(mappedBy = "autor" ,fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Devocional> devocionales;
 
     @OneToMany(mappedBy = "usuarioId", cascade = CascadeType.ALL, orphanRemoval = true)
